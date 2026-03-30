@@ -13,8 +13,8 @@ st.set_page_config(page_title="AI Resume Screener | Mankar Official")
 # 1. API AND DATABASE SETUP
 # ==========================================
 load_dotenv()
-# Direct Key Test (For testing purposes only)
-genai.configure(api_key="haha")
+# Direct Key 
+genai.configure(api_key="enter_your_real_key")
 
 
 # Keep vector database always accessible
@@ -75,7 +75,7 @@ with st.sidebar:
                 collection = chroma_client.get_or_create_collection("ai_resumes")
                 
                 # 3. Success confirmation
-                st.success("Vector store reset complete! Ready for new hiring cycle. ✨")
+                st.success("✅ Database cleared successfully! Ready for new hiring cycle. ✨")
                 
             except Exception as e:
                 st.error("Vector store already empty or error occurred.")
