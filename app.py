@@ -14,7 +14,7 @@ st.set_page_config(page_title="AI Resume Screener | Mankar Official")
 # ==========================================
 load_dotenv()
 # Direct Key 
-genai.configure(api_key="GOOGLE_API_KEY")
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 
 # Keep vector database always accessible
