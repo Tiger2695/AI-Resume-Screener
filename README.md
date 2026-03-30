@@ -27,4 +27,4 @@ streamlit run app.py
 
 ## 👨‍💻 Author
 
-**Chitransh Mankar** - Bhopal
+**Chitransh Mankar**
