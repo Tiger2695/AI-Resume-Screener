@@ -13,8 +13,13 @@ st.set_page_config(page_title="AI Resume Screener | Mankar Official")
 # 1. API AND DATABASE SETUP
 # ==========================================
 load_dotenv()
-# Direct Key 
-genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+
+# 2. Ab memory se key nikalo (Naam exactly match hona chahiye)
+api_key = os.getenv("GEMINI_API_KEY")
+
+if not api_key:
+    st.error("🚨 API Key not found! check .env file.")
+genai.configure(api_key=api_key)
 
 
 # Keep vector database always accessible
